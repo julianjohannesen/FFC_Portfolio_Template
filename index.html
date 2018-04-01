@@ -1,24 +1,168 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Free Code Camp: Personal Portfolio</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <!-- Other stylesheets -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+</head>
 
-      
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark">
+
+        <div>
+            <a class="navbar-brand" href="#top">Christopher Greenfelder</a>
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/wegotvices/128.jpg" alt="Me" title="Me" style="width:50px; height:50px; border-radius: 50%;">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbar">
+            <div class="navbar-nav text-right">
+                <a href="#top" class="nav-item nav-link active">About</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <!-- About -->
+        <div class="intro">
+            <p>Non nulla esse quasi quo numquam rerum similique in quis. Rerum perferendis omnis omnis ullam corrupti. Impedit
+                consequatur enim. Debitis velit autem et eius mollitia voluptatibus doloremque qui ad. Et quis id optio ab
+                deleniti sequi. Occaecati assumenda et esse dicta officiis dolores neque consequatur. Incidunt quos rerum
+                omnis laboriosam. Vel consequatur sunt in omnis ut ratione aut eos dolor. Praesentium et ut dicta et natus
+                explicabo. Tempore ut est autem. Repudiandae similique ipsa molestiae consectetur molestiae laborum voluptatum
+                aliquam. Eos et numquam. Blanditiis fuga eligendi vero.Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Aut nobis non vitae soluta necessitatibus cumque modi at quisquam explicabo dolor unde veritatis, deserunt
+                pariatur architecto odio voluptas facere consequuntur reprehenderit?
+            </p>
+            <hr class="dc">
+            <span class="skills">Global - Applications - Investor</span>
+        </div>
+        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/wegotvices/128.jpg"
+            alt="Me" title="Me">
+
+        <!-- Portfolio -->
+        <section class="portfolio" id="portfolio">
+            <h2>Portfolio</h2>
+            <hr class="dc">
+            <ul class="grid">
+                <li>
+                    <a href="https://bloom305.github.io/FreeCodeCamp/Tribute_Page/">
+                        <img src="https://bloom305.github.io/FreeCodeCamp/Portfolio/Tribute_Page.png" alt="Tribute Page">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/bloom305/full/pRQvyV/">
+                        <img src="https://bloom305.github.io/FreeCodeCamp/Portfolio/Quote_Machine.png" alt="Quote Machine">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bloom305.github.io/FreeCodeCamp/local_weather/">
+                        <img src="https://bloom305.github.io/FreeCodeCamp/Portfolio/local_weather.png" alt="Local Weather">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bloom305.github.io/FreeCodeCamp/Wikipedia_Viewer/">
+                        <img src="https://bloom305.github.io/FreeCodeCamp/Portfolio/WikiViewer.png" alt="WikiViewer">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bloom305.github.io/FreeCodeCamp/Twitch_Viewer/">
+                        <img src="https://bloom305.github.io/FreeCodeCamp/Portfolio/Twitch_API.png" alt="Twitch">
+                    </a>
+                </li>
+                <li>
+                    <img src="http://lorempixel.com/390/320/technics" alt="">
+                </li>
+                <li>
+                    <img src="http://lorempixel.com/390/320/business" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/390x320" alt="">
+                </li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <hr class="dc">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" class="form-control" name="name" id="name" aria-describedby="namehelp" placeholder="Name">
+                    <small id="namehelp" class="form-text text-muted">Enter name</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailhelp" placeholder="Email Address">
+                    <small id="emailhelp" class="form-text text-muted">Enter email address</small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="6" cols="5" placeholder="message"></textarea>
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Button to return to the top -->
+        <div class="scroll-button">
+            <a href="#top" class="button">
+                <i class="fa fachevron-up"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="upper-footer">
+        <div>
+            <h3>Look me up!</h3>
+            <ul>
+                <li>
+                    <a class="button" href="https://www.linkedin.com" target='_blank'>
+                        <i class="fa fa-fw fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com" target='_blank'>
+                        <i class="fa fa-fw fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="https://www.facebook.com" target='_blank'>
+                        <i class="fa fa-fw fa-facebook-f"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
