@@ -1,13 +1,17 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync').create();
-var htmlmin = require('gulp-htmlmin');
-var cleanCSS = require('gulp-clean-css');
-var sourcemaps = require('gulp-sourcemaps');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify-es').default;
-var imagemin = require('gulp-imagemin');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+let autoprefixer = require('gulp-autoprefixer');
+let browserSync = require('browser-sync').create();
+let htmlmin = require('gulp-htmlmin');
+let cleanCSS = require('gulp-clean-css');
+let sourcemaps = require('gulp-sourcemaps');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglify-es').default;
+let imagemin = require('gulp-imagemin');
+let useref = require('gulp-useref');
+let gulpIf = require('gulp-if');
+let cssnano = require('gulp-cssnano');
+let lazypipe = require('lazypipe');
 
 gulp.task('default', ['styles', 'browser-sync'], function () {
     gulp.watch('sass/**/*.scss', ['styles']);
@@ -50,7 +54,7 @@ gulp.task('css', function () {
 gulp.task('js', function () {
     gulp.src(['./js/index1.js', './js/index2.js'])
         .pipe(sourcemaps.init())
-        .pipe(concat('main.js'))
+        .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/js'))
@@ -62,4 +66,16 @@ gulp.task('img', function () {
         .pipe(gulp.dest('build/assets'))
 });
 
-gulp.task('build', ['html', 'css', 'js'], function () { });
+gulp.task('useref', function () {
+    gulp.src('./*.html')
+        .pipe(useref({}, lazypipe().pipe(sourcemaps.init, {})))
+        .pipe(gulpIf('js/*.js', uglify()))
+        .pipe(gulpIf('css/*.css', cssnano()))
+        .pipe(htmlmin({ collapseWhitespace: true}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build'))
+});
+
+gulp.task('build', ['useref', 'img'], function () { 
+
+});
