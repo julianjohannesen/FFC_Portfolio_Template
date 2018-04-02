@@ -1,4 +1,8 @@
 $title : #65B95B;
+%anchor-hover {
+    color: yellow;
+    background: black;
+}
 
 body {
     color: black;
@@ -23,8 +27,7 @@ nav {
 
     a:hover,
     a:focus {
-        color: yellow;
-        background: black;
+        @extend %anchor-hover;
     }   
 }
 
@@ -151,8 +154,7 @@ footer {
 
 .button:hover {
     border: 1px solid yellow;
-    color: yellow;
-    background: black; 
+    @extend %anchor-hover;
 }
 
 .dc {
