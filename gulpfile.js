@@ -110,6 +110,6 @@ gulp.task('ref', function () {
 /**
  * Task build files using dependencies
  */
-gulp.task('build', ['useref', 'img'], function () { 
+gulp.task('build', ['ref', 'img'], function () { 
 
 });
